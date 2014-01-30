@@ -8,4 +8,13 @@
       </h1>
     </section>
   </aside>
+  <div class="span8">
+    <% if @user.value_inquiry.any? %>
+      <h3>value_inquiry (<%= @user.value_inquiry.count %>)</h3>
+      <ol class="value_inquiry">
+        <%= render @value_inquiry %>
+      </ol>
+      <%= will_paginate @value_inquiry %>
+    <% end %>
+  </div>
 </div>

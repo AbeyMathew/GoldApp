@@ -1,0 +1,30 @@
+<%= form_for(@value_inquiry) do |f| %>
+<%= render 'shared/error_messages', object: f.object %>
+<%#= f.hidden_field :value_inquiry, value: @value_inquiry.id %>
+<%= f.hidden_field :market_price, value: @latest_price %>
+<%#= f.hidden_field :troy_ounce, value: @troy_ounce %>
+<%#= f.hidden_field :pure_gram_price, value: @pure_gram_price %>
+<%#= f.hidden_field :pure_gram_karat, value: 24 %>
+<%= f.hidden_field :value, value: 0%>
+
+<table>
+	<tr>
+		<td><div class="field inline">
+	<%= f.label :"Gold Purity in Karats"%>
+	<%= f.collection_select(:karat, @karat_list, :last, :first)%>
+	<%= f.label :"Gold Weight"%>
+	<%= f.text_field :weight, placeholder: "Enter Gold Weight in Grams"  %>
+	<br/>
+	<span> Gold Price is $<%=@latest_price%>/Troy ounce as of <%=@latest_date%></span>
+<br/>
+</div></td>
+		<td><a href="http://www.goldline.com/gold-prices-charts" title="Gold Prices"><img src="http://www.goldline.com/widgets/?metal=gold&size=lg" border="0" target="_blank" title="Gold Prices Chart" alt="Gold Prices Chart"></a>
+
+<!--div style='text-align:center'><div><script src='http://cashforgoldusa.com/calc/embed_medium.js'></script></div><div style='padding:5px 0px 10px 0px;font-size:13px;font-family:helvetica;'>powered by <a style='text-decoration:none' href='http://cashforgoldusa.com'>Cash For Gold USA</a></div></div-->
+</td>
+	</tr>
+</table>
+
+
+<%= f.submit "Submit & Save Inquiry", class: "btn btn-large btn-primary" %>
+<% end %>

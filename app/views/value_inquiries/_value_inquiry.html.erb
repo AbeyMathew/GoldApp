@@ -1,0 +1,9 @@
+<li>
+  <span class="karat"><%= value_inquiry.karat %></span>
+  <span class="karat"><%= value_inquiry.weight %></span>
+  <span class="karat"><%= value_inquiry.market_price %></span>
+  <span class="karat"><%= value_inquiry.value %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(value_inquiry.created_at) %> ago.
+  </span>
+</li>

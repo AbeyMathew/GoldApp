@@ -6,10 +6,19 @@ describe "User pages" do
 
   describe "profile page" do
     let(:user) { FactoryGirl.create(:user) }
+    let!(:m1) { FactoryGirl.create(:value_inquiry, user: user, karat: "22", weight: "2", market_price: "20", value: "40") }
+    let!(:m2) { FactoryGirl.create(:value_inquiry, user: user, karat: "21", weight: "3", market_price: "17", value: "51") }
+    
     before { visit user_path(user) }
 
     it { should have_content(user.name) }
     it { should have_title(user.name) }
+
+    describe "value_inquiry" do
+      it { should have_content(m1.content) }
+      it { should have_content(m2.content) }
+      it { should have_content(user.value_inquiry.count) }
+    end
   end
 
   describe "signup page" do

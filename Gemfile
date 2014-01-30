@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
+gem 'faker'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+gem 'httparty', '0.12.0'
 
 # Use sqlite3 as the database for Active Record
 group :development do
