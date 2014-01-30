@@ -13,17 +13,17 @@
 
 ActiveRecord::Schema.define(version: 20140122211255) do
 
-  create_table "gold_value_inquiries", force: true do |t|
-    t.decimal  "Purity"
-    t.decimal  "Weight"
-    t.decimal  "MarketPrice"
-    t.decimal  "Value"
-    t.integer  "UserId"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+#  create_table "gold_value_inquiries", force: true do |t|
+#    t.decimal  "Purity"
+#    t.decimal  "Weight"
+#    t.decimal  "MarketPrice"
+#    t.decimal  "Value"
+#    t.integer  "UserId"
+#    t.datetime "created_at"
+#    t.datetime "updated_at"
+#  end
 
-  add_index "gold_value_inquiries", ["UserId", "created_at"], name: "index_gold_value_inquiries_on_UserId_and_created_at"
+#  add_index "gold_value_inquiries", ["UserId", "created_at"], name: "index_gold_value_inquiries_on_UserId_and_created_at"
 
   create_table "users", force: true do |t|
     t.string   "name"

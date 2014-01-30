@@ -1,5 +1,5 @@
 class ValueInquiriesController < ApplicationController
-  before_action :signed_in_user, only: [:create, :destroy]
+  before_action :signed_in_user, only: [:create, :update, :destroy]
 
   def index
   end
@@ -8,7 +8,7 @@ class ValueInquiriesController < ApplicationController
     @pure_gram_karat = 24
     @troy_ounce = 31.1
 
-      value_inquiry_params[:value] = ((value_inquiry_params[:karat].to_f / @pure_gram_karat) * (value_inquiry_params[:market_price].to_f / @troy_ounce) * value_inquiry_params[:weight].to_f)
+      params[:value_inquiry][:value] = ((value_inquiry_params[:karat].to_f / @pure_gram_karat) * (value_inquiry_params[:market_price].to_f / @troy_ounce) * value_inquiry_params[:weight].to_f)
       puts 'ValueInquiriesController *******************'
       puts value_inquiry_params
       puts value_inquiry_params[:karat].to_f
@@ -31,7 +31,6 @@ class ValueInquiriesController < ApplicationController
   def destroy
   end
 
-  private
 
   def value_inquiry_params
 #    @value = (params[][:karat]/value_inquiry_params[:pure_gram_karat])*@puregram

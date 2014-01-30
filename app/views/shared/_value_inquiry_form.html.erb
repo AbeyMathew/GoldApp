@@ -13,7 +13,7 @@
 	<%= f.label :"Gold Purity in Karats"%>
 	<%= f.collection_select(:karat, @karat_list, :last, :first)%>
 	<%= f.label :"Gold Weight"%>
-	<%= f.text_field :weight, placeholder: "Enter Gold Weight in Grams"  %>
+	<%= f.text_field :weight, placeholder: "Enter Gold Weight in Grams", type: "number"  %>
 	<br/>
 	<span> Gold Price is $<%=@latest_price%>/Troy ounce as of <%=@latest_date%></span>
 <br/>
