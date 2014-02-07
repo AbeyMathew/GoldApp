@@ -186,11 +186,15 @@ input {
     border-top: 1px solid #e8e8e8;
   }
 }
-.karat {
+/*.karat {
   display: block;
+}*/
+input, select, textarea{
+  width: 250px;
 }
 .timestamp {
   color: $grayLight;
+  display: block;
 }
 .gravatar {
   float: left;

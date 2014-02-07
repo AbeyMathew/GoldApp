@@ -1,8 +1,8 @@
 <li>
-  <span class="karat"><%= value_inquiry.karat %></span>
-  <span class="karat"><%= value_inquiry.weight %></span>
-  <span class="karat"><%= value_inquiry.market_price %></span>
-  <span class="karat"><%= value_inquiry.value %></span>
+  <span class="weight"><%= value_inquiry.weight %> grams @</span>
+  <span class="karat"><%= value_inquiry.karat %> karat</span>
+  <span class="value">was valued at <%= value_inquiry.value %></span>
+  <span class="market_price"> when a Troy ounce was priced at <%= value_inquiry.market_price %></span>
   <span class="timestamp">
     Posted <%= time_ago_in_words(value_inquiry.created_at) %> ago.
   </span>

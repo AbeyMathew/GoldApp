@@ -8,6 +8,8 @@ gem 'faker'
 gem 'will_paginate', '3.0.4'
 gem 'bootstrap-will_paginate', '0.0.9'
 gem 'httparty', '0.12.0'
+gem 'pry'
+gem 'pry-debugger'
 
 # Use sqlite3 as the database for Active Record
 group :development do

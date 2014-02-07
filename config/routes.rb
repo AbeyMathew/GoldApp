@@ -1,8 +1,7 @@
 GoldApp::Application.routes.draw do
   resources :users
-  resources :sessions,      only: [:new, :create, :destroy]
-  #resources :value_inquiry, only: [:new, :create, :destroy]
-  resources :value_inquiries, only: [:new, :create, :destroy]
+  resources :sessions, only: [:new, :create, :destroy]
+  resources :value_inquiries, only: [:new, :create, :update, :destroy]
   
   root  'static_pages#home'
   match '/signup',  to: 'users#new',            via: 'get'

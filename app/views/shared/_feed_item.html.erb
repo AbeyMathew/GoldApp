@@ -1,0 +1,13 @@
+<li id="<%= feed_item.id %>">
+  <%#= link_to gravatar_for(feed_item.user), feed_item.user %>
+  <span class="user">
+    <%= link_to feed_item.user.name, feed_item.user %> made an inquiry for
+  </span>
+  <span class="weight"><%= feed_item.weight %> grams @</span>
+  <span class="karat"><%= feed_item.karat %> karat</span>
+  <span class="value">was valued at <%= feed_item.value %></span>
+  <span class="market_price"> when a Troy ounce was priced at <%= feed_item.market_price %></span>
+    <span class="timestamp">
+    Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+  </span>
+</li>

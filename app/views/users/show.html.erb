@@ -1,6 +1,6 @@
 <% provide(:title, @user.name) %>
 <div class="row">
-  <aside class="span4">
+  <aside class="span2">
     <section>
       <h1>
         <%= gravatar_for @user %>
@@ -10,7 +10,7 @@
   </aside>
   <div class="span8">
     <% if @user.value_inquiry.any? %>
-      <h3>value_inquiry (<%= @user.value_inquiry.count %>)</h3>
+      <h3>Inquiries (<%= @user.value_inquiry.count %>)</h3>
       <ol class="value_inquiry">
         <%= render @value_inquiry %>
       </ol>
